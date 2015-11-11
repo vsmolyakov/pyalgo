@@ -55,7 +55,7 @@ class BinHeap:
 if __name__ == "__main__":
 
     bh = BinHeap()
-    bh.buildHeap([9,5,6,2,3])
+    bh.buildHeap([10,5,6,2,3])
 
     print(bh.delMin())
     print(bh.delMin())
