@@ -1,34 +1,28 @@
-# algo
-Algorithms and Data Structures
+# pyalgo
+Algorithms and Data Structures in Python
 
-**Network Analysis**
+### Graph Algorithms
 
-Networks also known as graphs are comprised of nodes and edges. Here, the moreno seventh grade network is analyzed for its basic properties. Each node represents a student and an edge between two nodes represents connection between students for three different activities.
+* [DFS](./graphs/DFS.py)
+* [BFS](./graphs/BFS.py)
 
-<p align="center">
-<img src="https://github.com/vsmolyakov/algo/blob/master/network/figures/network_merged.png"/>
-</p>
+### Tree Algorithms
 
-The figure above shows a visualization of the network (left), its adjacency matrix (center) and a page rank (right). 
+### Complete Search
 
-References:  
-*T. Cormen, C. Leiserson, R. Rivest, C. Stein, "Introduction to Algorithms", 2009.*  
+### Greedy Algorithms
 
-**Sorting**
+### Divide and Conquer
 
-Sorting is a common operation in many programming tasks. The sorts of various complexities have been implemented including bubble, selection, insertion, merge and quicksort
+### Dynamic Programming
 
-<p align="center">
-<img src="https://github.com/vsmolyakov/algo/blob/master/sorting/figures/sorting_merged.png"/>
-</p>
+### Sorting
 
-The figure above shows an unsorted sequence of integers (left) and the sorted equivalent (right). 
+### Data Structures
 
-References:  
-*https://interactivepython.org/runestone/static/pythonds/index.html*  
+### Misc
 
 
 ### Dependencies
 
-Python 2.7  
-C++  
+Python3
