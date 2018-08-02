@@ -16,18 +16,15 @@ Algorithms and Data Structures in Python
 
 ### Complete Search
 
-### Greedy Algorithms
+* [Generating subsets](./complete_search/subset_gen.py)  
 
 ### Divide and Conquer
 
+* [Binary search](./divide_and_conquer/binary_search.py)  
+
 ### Dynamic Programming
 
-### Sorting
-
-### Data Structures
-
-### Misc
-
+* [Binomial coefficients](./pyalgo/binomial_coeffs.py)  
 
 ### Dependencies
 
