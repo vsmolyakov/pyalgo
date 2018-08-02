@@ -24,7 +24,7 @@ Algorithms and Data Structures in Python
 
 ### Dynamic Programming
 
-* [Binomial coefficients](./pyalgo/binomial_coeffs.py)  
+* [Binomial coefficients](./dynamic_programming/binomial_coeffs.py)  
 
 ### Dependencies
 
