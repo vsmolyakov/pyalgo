@@ -26,6 +26,13 @@ Algorithms and Data Structures in Python
 
 * [Binomial coefficients](./dynamic_programming/binomial_coeffs.py)  
 
+### Sorting  
+
+* [Radix sort](./sorting/radix_sort.py)  
+* [Quick sort](./sorting/quick_sort.py)
+* [Merge sort](./sorting/merge_sort.py)
+* [Heap sort](./sorting/heap_sort.py)  
+
 ### Dependencies
 
 Python3
