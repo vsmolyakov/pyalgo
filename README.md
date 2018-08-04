@@ -37,6 +37,15 @@ Algorithms and Data Structures in Python
 
 * [Binary Search Tree](./data_structures/bst.py)  
 
+### Misc
+
+* [Sliding window](./misc/sliding_window.py)  
+* [Two pointers](./misc/two_pointers.py)  
+* [Intersection](./misc/intersection.py)  
+* [Matching parentheses](./misc/matching_parentheses.py)  
+* [Cycle detection (Floyd)](./misc/cycle_detection_floyd.py)  
+* [Flood fill](./misc/flood_fill.py)  
+
 ### Dependencies
 
 Python3
