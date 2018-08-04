@@ -33,6 +33,10 @@ Algorithms and Data Structures in Python
 * [Merge sort](./sorting/merge_sort.py)
 * [Heap sort](./sorting/heap_sort.py)  
 
+### Data Structures
+
+* [Binary Search Tree](./data_structures/bst.py)  
+
 ### Dependencies
 
 Python3
