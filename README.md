@@ -47,7 +47,7 @@ Algorithms and Data Structures in Python
 * [Matching parentheses](./misc/matching_parentheses.py)  
 * [Cycle detection (Floyd)](./misc/cycle_detection_floyd.py)  
 * [Flood fill](./misc/flood_fill.py)  
-* [Tower of hanoi](./misc/tower_of_hanoi.py)  
+* [Tower of Hanoi](./misc/tower_of_hanoi.py)  
 
 ### Dependencies
 
