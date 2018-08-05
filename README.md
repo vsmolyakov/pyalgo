@@ -25,6 +25,8 @@ Algorithms and Data Structures in Python
 ### Dynamic Programming
 
 * [Binomial coefficients](./dynamic_programming/binomial_coeffs.py)  
+* [Coin change](./dynamic_programming/coin_change.py)  
+
 
 ### Sorting  
 
