@@ -21,6 +21,7 @@ Algorithms and Data Structures in Python
 ### Divide and Conquer
 
 * [Binary search](./divide_and_conquer/binary_search.py)  
+* [Quick select](./divide_and_conquer/quick_select.py)  
 
 ### Dynamic Programming
 
