@@ -38,6 +38,7 @@ Algorithms and Data Structures in Python
 
 ### Data Structures
 
+* [LRU cache](./data_structures/lru_cache.py)  
 * [Binary Search Tree](./data_structures/bst.py)  
 
 ### Misc
