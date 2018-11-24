@@ -13,6 +13,7 @@ Algorithms and Data Structures in Python
 
 * [Tree Traversals](./trees/tree_traversal.py)  
 * [Tree Vertical Order](./trees/tree_vertical_order.py)  
+* [Tree Diameter](./trees/tree_diameter.py)  
 
 ### Complete Search
 
