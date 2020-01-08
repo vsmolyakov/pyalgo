@@ -19,6 +19,10 @@ Algorithms and Data Structures in Python
 
 * [Generating subsets](./complete_search/subset_gen.py)  
 
+### Greedy Algorithms
+
+* [Fractional Knapsack](./greedy/knapsack_greedy.py)
+
 ### Divide and Conquer
 
 * [Binary search](./divide_and_conquer/binary_search.py)  
