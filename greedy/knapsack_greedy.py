@@ -15,7 +15,7 @@ class FractionalKnapSack:
         for i in range(len(wt)): 
             item_list.append(Item(wt[i], val[i], i)) 
   
-        # sorting items by value 
+        # sorting items by cost heuristic
         item_list.sort(reverse = True)  #O(nlogn)
   
         total_value = 0
