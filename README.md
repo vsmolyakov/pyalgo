@@ -17,6 +17,7 @@ Algorithms and Data Structures in Python
 
 ### Complete Search
 
+* [n-Queens problem](./complete_search/n_queens.py)  
 * [Generating subsets](./complete_search/subset_gen.py)  
 
 ### Greedy Algorithms
