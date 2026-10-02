@@ -16,21 +16,22 @@ class Graph:
 
         while queue:
             s = queue.pop(0)
-            print s,
+            print(s)
 
             for i in self.graph[s]:
                 if visited[i] == False:
                     queue.append(i)
                     visited[i] = True
 
-g = Graph()
-g.add_edge(0, 1)
-g.add_edge(0, 2)
-g.add_edge(1, 2)
-g.add_edge(2, 0)
-g.add_edge(2, 3)
-g.add_edge(3, 3)
+if __name__ == "__main__":
+    g = Graph()
+    g.add_edge(0, 1)
+    g.add_edge(0, 2)
+    g.add_edge(1, 2)
+    g.add_edge(2, 0)
+    g.add_edge(2, 3)
+    g.add_edge(3, 3)
 
-node = 2
-print("BFS starting from vertex %d:" % node)
-g.BFS(node)
+    node = 2
+    print("BFS starting from vertex %d:" % node)
+    g.BFS(node)
