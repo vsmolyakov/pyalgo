@@ -4,7 +4,8 @@ Algorithms and Data Structures in Python
 ### Graph Algorithms
 
 * [DFS](./graphs/DFS.py)
-* [BFS](./graphs/BFS.py)
+* [BFS](./graphs/BFS.py)  
+* [A*](./graphs/astar.py)  
 * [Topological Sort Tarjan](./graphs/topological_sort.py)  
 * [Bipartite check](./graphs/bipartite_check.py)  
 * [All Pairs Shortest Paths](./graphs/apsp_floyd_warshall.py) 
