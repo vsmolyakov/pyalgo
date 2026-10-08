@@ -50,7 +50,7 @@ def ida_star(grid, start, goal):
     threshold = manhattan(start, goal)
 
     path = [start]
-    visited = {start}
+    visited = {start}   #set
 
     #nested function: a function defined inside another function
     #the main reason is that search() needs access to variables that
@@ -69,13 +69,13 @@ def ida_star(grid, start, goal):
 
         # Node is outside current threshold
         if f > threshold:
-            return f
+            return f  #prune: do not explore node's neighbors and return new low threshold
 
         # Goal reached
         if node == goal:
             return list(path)
 
-        minimum = inf
+        minimum = inf   #used to keep track of smallest exceeded f-value
 
         for neighbor in get_neighbors(grid, node):
 
@@ -99,6 +99,9 @@ def ida_star(grid, start, goal):
             # Keep track of smallest exceeded f-value
             minimum = min(minimum, result)
 
+            # Backtrack: undo the move to neighbor
+            # we finished exploring the neighbor
+            # go back to previous position
             path.pop()
             visited.remove(neighbor)
 
