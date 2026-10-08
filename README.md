@@ -5,7 +5,8 @@ Algorithms and Data Structures in Python
 
 * [DFS](./graphs/DFS.py)
 * [BFS](./graphs/BFS.py)  
-* [A*](./graphs/astar.py)  
+* [A*](./graphs/astar.py) 
+* [IDA*](./graphs/idastar.py) 
 * [Topological Sort Tarjan](./graphs/topological_sort.py)  
 * [Bipartite check](./graphs/bipartite_check.py)  
 * [All Pairs Shortest Paths](./graphs/apsp_floyd_warshall.py) 
