@@ -25,7 +25,7 @@ import numpy as np
 #       DBL -------- DRB
 
 CORNERS = [
-    ( 1,  1,  1),   # 0 URF
+    ( 1,  1,  1),   # 0 URF  (x, y, z)
     (-1,  1,  1),   # 1 UFL
     (-1,  1, -1),   # 2 ULB
     ( 1,  1, -1),   # 3 UBR
@@ -49,6 +49,7 @@ FACES = {
 
 # ------------------------------------------------------------
 # Create the 24 sticker positions
+# 24 = 8 corners * 3 stickers per corner
 # ------------------------------------------------------------
 
 # Each sticker is:
@@ -193,6 +194,7 @@ SOLVED = tuple(range(24))
 def apply_move(state, permutation):
     """
     Apply a permutation to a cube state.
+    For new position i, look up the old position specified by permutation[i], and copy the sticker from there.
     """
 
     return tuple(
@@ -245,7 +247,6 @@ for face in ["U", "D", "R", "L", "F", "B"]:
         (face + "'", inverse, face)
     )
 
-
 # ============================================================
 # 6. CORNER PERMUTATION
 # ============================================================
@@ -254,6 +255,12 @@ def corner_permutation(state):
     """
     Ignore corner orientation and determine which corner cubie
     occupies each corner position.
+    
+    Simplify the 24-sticker cube representation into an 8-corner representation
+    so that we can build a heuristic for IDA*
+
+    IDA* needs a heuristic that answers a simpler question:
+    How far is the cube from having all its corner cubies in their correct positions?
 
     Example:
 
@@ -311,7 +318,6 @@ for name, permutation, face in ACTIONS:
     CORNER_MOVES[name] = corner_permutation(
         moved_state
     )
-
 
 # ============================================================
 # 8. BUILD A PATTERN DATABASE
@@ -388,7 +394,6 @@ print(
     "Heuristic states:",
     len(CORNER_DISTANCE)
 )
-
 
 # ============================================================
 # 9. HEURISTIC
@@ -505,10 +510,10 @@ class IDAStarSolver:
 
         minimum = float("inf")
 
-
+        #ACTIONS are the 18 possible moves / neighbors of the current state
         for name, permutation, face in ACTIONS:
 
-            # Prune redundant moves.
+            # Prune redundant moves to reduce the search space 
             if should_prune(
                 last_face,
                 face
@@ -596,7 +601,6 @@ ACTION_LOOKUP = {
     for name, permutation, face
     in ACTIONS
 }
-
 
 def scramble_cube(scramble):
 
