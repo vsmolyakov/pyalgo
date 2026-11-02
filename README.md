@@ -60,8 +60,9 @@ Algorithms and Data Structures in Python
 * [Flood fill](./misc/flood_fill.py)  
 * [Tower of Hanoi](./misc/tower_of_hanoi.py)  
 * [Fisher-Yates shuffle](./misc/fisher_yates_shuffle.py)  
-* [Rubik's Cube](./misc/rubiks_cube.py) 
+* [Rubik's Cube IDA*](./misc/rubiks_cube.py) 
 * [Rubik's Cube Analysis](./misc/rubiks_cube_analysis.py) 
+* [Rubik's Cube MCTS](./misc/rubiks_cube_mcts.py) 
 
 ### Dependencies
 
