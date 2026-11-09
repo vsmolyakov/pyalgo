@@ -63,6 +63,7 @@ Algorithms and Data Structures in Python
 * [Rubik's Cube IDA*](./misc/rubiks_cube.py) 
 * [Rubik's Cube Analysis](./misc/rubiks_cube_analysis.py) 
 * [Rubik's Cube MCTS](./misc/rubiks_cube_mcts.py) 
+* [Rubik's Cube IDA* vs MCTS](./misc/compare_idastar_mcts.py)   
 
 ### Dependencies
 
