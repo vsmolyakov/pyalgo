@@ -49,15 +49,68 @@ class MCTSCubeSolver:
         self.history = []
         self.last_root = None
 
+        # Precompute the three sticker positions belonging to each corner.
+        # The state stores sticker IDs, and STICKERS[sticker_id][0] gives
+        # the corner cubie from which that sticker originated.
+        self.corner_positions = [
+            tuple(i for i, sticker in enumerate(STICKERS)
+                  if sticker[0] == corner_id)
+            for corner_id in range(8)
+        ]
+        self.sticker_source_corner = tuple(
+            sticker[0] for sticker in STICKERS
+        )
+
     def is_solved(self, state):
         return state == self.solved
 
     def heuristic(self, state):
-        # Fraction of stickers in their solved positions.
-        # This is a weak proxy, NOT an admissible distance heuristic.
-        return sum(
-            a == b for a, b in zip(state, self.solved)
-        ) / len(self.solved)
+        """
+        Return a normalized corner-aware estimate in [0, 1].
+
+        A 2x2x2 cube has eight corner cubies, each represented by three
+        stickers. The previous sticker-only score treated every sticker
+        independently and could give a misleadingly high score when the
+        three stickers of a corner belonged to different cubies.
+
+        Components:
+          * 40%: corner cubies in their correct locations (orientation ignored)
+          * 30%: stickers in their exact solved positions
+          * 30%: completely solved corners (piece and orientation correct)
+
+        This is a rollout-ranking heuristic, not an admissible distance
+        estimate. A value of 1.0 means the cube is solved.
+        """
+        correctly_placed = 0
+        correctly_oriented_stickers = 0
+        fully_solved_corners = 0
+
+        for corner_id, positions in enumerate(self.corner_positions):
+            # Identify which original cubie occupies this destination corner.
+            source_corners = {
+                self.sticker_source_corner[state[position]]
+                for position in positions
+            }
+
+            # In a valid cube state, all three stickers at a corner belong
+            # to the same original corner cubie.
+            if source_corners == {corner_id}:
+                correctly_placed += 1
+
+            exact_stickers = sum(
+                state[position] == self.solved[position]
+                for position in positions
+            )
+            correctly_oriented_stickers += exact_stickers
+
+            if exact_stickers == 3:
+                fully_solved_corners += 1
+
+        return (
+            0.40 * (correctly_placed / 8)
+            + 0.30 * (correctly_oriented_stickers / 24)
+            + 0.30 * (fully_solved_corners / 8)
+        )
 
     def legal_actions(self, last_face=None):
         if last_face is None:
